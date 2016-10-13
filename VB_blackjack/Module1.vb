@@ -2,6 +2,7 @@
 
     Sub Main()
 
+
         Dim player As Player = New Player()
         Dim player2 As Player = New Player()
         Dim dealer As Dealer = New Dealer()
