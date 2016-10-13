@@ -31,19 +31,25 @@
         ShowTotalCardScore()
     End Sub
 
-    Public Function GetChoice() As Integer
-        Dim choice As Integer
+    Public Function GetChoice() As String
+        Dim valid_options() As String = {"1", "2"}
+
+        Dim choice As String
         Console.Write("[1] Stick [2] Twist - Option: ")
-        choice = Console.ReadLine
+        choice = Console.ReadLine()
+        While Not valid_options.Contains(choice)
+            Console.Write("[1] Stick [2] Twist - Option: ")
+            choice = Console.ReadLine()
+        End While
         Return choice
     End Function
 
     Public Sub ProcessChoice()
         If Not Me.__STICK Then
-            Dim choice As Integer = GetChoice()
-            If choice = 2 Then
+            Dim choice As String = GetChoice()
+            If choice = "2" Then
                 Twist()
-            ElseIf choice = 1 Then
+            ElseIf choice = "1" Then
                 Stick()
             End If
         End If
