@@ -125,6 +125,7 @@
 #End Region
 
 #Region "Get Set Modifiers"
+
     Public Property CardScore()
         Get
             Return __cardScore
@@ -133,6 +134,7 @@
             __cardScore = value
         End Set
     End Property
+
 #End Region
 
 End Class

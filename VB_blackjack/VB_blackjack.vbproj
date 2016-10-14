@@ -50,6 +50,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,13 +90,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UI\Base_Table.Designer.vb">
+      <DependentUpon>Base_Table.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base_Table.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Base_Table.resx">
+      <DependentUpon>Base_Table.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +119,174 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_joker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_joker.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
