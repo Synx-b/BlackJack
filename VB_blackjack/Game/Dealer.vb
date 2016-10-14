@@ -31,13 +31,16 @@
         Dim card As Card = cardStack.Pop
         __hand.Add(card)
         GetTotalScoreOfHand()
-        If CardScore < 21 Then
-            Twist()
-        ElseIf CardScore >= 17 And CardScore <= 21 Then
-            Stick()
-        Else
-            __BUST = True
+        If Not __STICK Then
+            If CardScore < 21 Then
+                Twist()
+            ElseIf CardScore >= 16 And CardScore <= 21 Then
+                Stick()
+            Else
+                __BUST = True
+            End If
         End If
+
 
     End Sub
 

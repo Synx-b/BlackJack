@@ -13,10 +13,11 @@
     End Sub
 
     Public Sub GetTotalScoreOfHand()
-        CardScore = 0
-        For Each card In __hand
-            CardScore += card.Value
-        Next
+        If CheckForAce() Then
+            GetTotalScoreOfHandForAce()
+        Else
+            CalculateHandsValue()
+        End If
     End Sub
 
     Public Sub ShowTotalCardScore()
@@ -32,13 +33,13 @@
     End Sub
 
     Public Function GetChoice() As String
-        Dim valid_options() As String = {"1", "2"}
+        Dim valid_options() As String = {"1", "2", "q"}
 
         Dim choice As String
-        Console.Write("[1] Stick [2] Twist - Option: ")
+        Console.Write("[1] Stick [2] Twist [q] Quit- Option: ")
         choice = Console.ReadLine()
         While Not valid_options.Contains(choice)
-            Console.Write("[1] Stick [2] Twist - Option: ")
+            Console.Write("[1] Stick [2] Twist [q] Quit- Option: ")
             choice = Console.ReadLine()
         End While
         Return choice
@@ -51,6 +52,8 @@
                 Twist()
             ElseIf choice = "1" Then
                 Stick()
+            ElseIf choice = "q" Then
+                Quit()
             End If
         End If
     End Sub
@@ -78,6 +81,50 @@
         Me.__STICK = True
     End Sub
 
+    Public Function CheckForAce() As Boolean
+        For Each card In __hand
+            If (card.Name = "Ace") Then
+                Return True
+            End If
+        Next
+        Return False
+    End Function
+
+    Public Sub GetTotalScoreOfHandForAce()
+        CalculateHandsValue()
+        Dim first_score As Integer = CardScore
+        If (first_score + 10) <= 21 Then
+            For Each card In __hand
+                If card.Name = "Ace" Then
+                    card.Value = 11
+                End If
+            Next
+            CalculateHandsValue()
+        Else
+            For Each card In __hand
+                If card.Name = "Ace" Then
+                    card.Value = 1
+                End If
+            Next
+            CalculateHandsValue()
+        End If
+
+    End Sub
+
+    Public Sub CalculateHandsValue()
+        CardScore = 0
+        For Each card In __hand
+            CardScore += card.Value
+        Next
+    End Sub
+
+    Public Sub Quit()
+        Console.WriteLine("EndTurn")
+    End Sub
+
+#End Region
+
+#Region "Get Set Modifiers"
     Public Property CardScore()
         Get
             Return __cardScore
@@ -86,7 +133,6 @@
             __cardScore = value
         End Set
     End Property
-
 #End Region
 
 End Class

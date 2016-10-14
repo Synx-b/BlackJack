@@ -1,5 +1,6 @@
 ﻿Public Class Card
 
+#Region "Card Members"
     Protected __names() As String = {"Ace", "2", "3", "4", "5", "6", "7",
                                     "8", "9", "10", "Jack", "Queen", "King"}
     Protected __suits() As String = {"Diamonds", "Hearts", "Clubs", "Spades"}
@@ -8,7 +9,9 @@
     Protected __value As Integer
     Protected __suit As String
     Protected __position As Integer
+#End Region
 
+#Region "Card Get Set Access Modifiers"
     Public Property Name() As String
         Get
             Return __name
@@ -44,5 +47,6 @@
             __position = value
         End Set
     End Property
+#End Region
 
 End Class
