@@ -1,10 +1,6 @@
 ﻿Public Class Dealer
     Inherits Player
 
-#Region "Dealer Members"
-
-#End Region
-
 #Region "Dealer Methods"
 
     Public Sub Deal(ByVal player As Player, ByVal player2 As Player)

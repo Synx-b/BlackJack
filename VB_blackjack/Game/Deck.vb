@@ -4,7 +4,6 @@ Public Class Deck
     Inherits Card
 #Region "DeckMembers"
     Private __deck As List(Of Card) = New List(Of Card)
-    Private cardCount As Integer = 0
     Protected cardStack As Stack = New Stack()
 
 #End Region
@@ -20,7 +19,6 @@ Public Class Deck
                 card.Value = Math.Min(10, x + 1)
                 card.Name = __names(x)
                 __deck.Add(card)
-                cardCount += 1
             Next
         Next
     End Sub
